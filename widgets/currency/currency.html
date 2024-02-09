@@ -1,21 +1,1194 @@
-<html>
-<head>
-    <link ref="stylesheet" href="currency.css">
-</head>
-<body>
-	<!-- START CODE Attention! Do not modify this code; -->
-	<script>
-		var fm = "USD";
-		var to = "PLN";
-		var tz = "timezone";
-		var sz = "1x1";
-		var lg = "en";
-		var st = "info";
-		var lr = "0";
-		var rd = "0";
-	</script>
-	<script src="//currencyrate.today/converter">
-	</script>
-	<!-- Attention! Do not modify this code; END CODE -->
-</body>
+<html lang="en" nighteye="disabled">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Currency</title>
+    <link rel="stylesheet" href="random.css" />
+  </head>
+  <body style="background-color: transparent">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title title-logo">Currency Converter</h4>
+      </div>
+      <div id="converter" data-base="USD" class="panel-body">
+        <div class="form-group">
+          <div class="input-group input-group-sm">
+            <div class="input-group-addon" id="currency-code">USD</div>
+            <input
+              aria-label="Amount"
+              class="form-control"
+              id="amount"
+              name="amount"
+              type="text"
+              autocomplete="off"
+              value="1"
+              data-twofas-input="true"
+            /><span class="input-group-btn"
+              ><button
+                id="swap"
+                title="Swap currencies"
+                class="btn btn-default btn-default"
+                type="button"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  role="img"
+                  fill="black"
+                  viewBox="0 0 1792 1792"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Swap currencies</title>
+                  <path
+                    d="M1792 1184v192q0 13-9.5 22.5t-22.5 9.5h-1376v192q0 13-9.5 22.5t-22.5 9.5q-12 0-24-10l-319-320q-9-9-9-22 0-14 9-23l320-320q9-9 23-9 13 0 22.5 9.5t9.5 22.5v192h1376q13 0 22.5 9.5t9.5 22.5zm0-544q0 14-9 23l-320 320q-9 9-23 9-13 0-22.5-9.5t-9.5-22.5v-192h-1376q-13 0-22.5-9.5t-9.5-22.5v-192q0-13 9.5-22.5t22.5-9.5h1376v-192q0-14 9-23t23-9q12 0 24 10l319 319q9 9 9 23z"
+                  ></path>
+                </svg></button
+            ></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <select
+            class="form-control input-sm currency-form"
+            name="from"
+            id="from"
+            data-currency-code="USD"
+          >
+            <optgroup label="Popular">
+              <option data-rate="1.8142" value="BGN">
+                BGN - Bulgarian Lev
+              </option>
+              <option data-rate="0.0000211451" value="BTC">
+                BTC - Bitcoin
+              </option>
+              <option data-rate="1" value="USD" selected="">
+                USD - US Dollar
+              </option>
+              <option data-rate="0.92751" value="EUR">EUR - Euro</option>
+              <option data-rate="0.79203" value="GBP">
+                GBP - British Pound Sterling
+              </option>
+              <option data-rate="1.534873" value="AUD">
+                AUD - Australian Dollar
+              </option>
+              <option data-rate="1.34799" value="CAD">
+                CAD - Canadian Dollar
+              </option>
+              <option data-rate="0.875101" value="CHF">
+                CHF - Swiss Franc
+              </option>
+              <option data-rate="7.1219" value="CNY">CNY - Chinese Yuan</option>
+              <option data-rate="149.3846" value="JPY">
+                JPY - Japanese Yen
+              </option>
+              <option data-rate="1.34673" value="SGD">
+                SGD - Singapore Dollar
+              </option>
+              <option data-rate="1.628842" value="NZD">
+                NZD - New Zealand Dollar
+              </option>
+              <option data-rate="279.35" value="PKR">
+                PKR - Pakistani Rupee
+              </option>
+              <option data-rate="7.81979" value="HKD">
+                HKD - Hong Kong Dollar
+              </option>
+              <option data-rate="1333.541192" value="KRW">
+                KRW - South Korean Won
+              </option>
+              <option data-rate="17.099107" value="MXN">
+                MXN - Mexican Peso
+              </option>
+              <option data-rate="10.56695" value="NOK">
+                NOK - Norwegian Krone
+              </option>
+              <option data-rate="968.28" value="CLP">CLP - Chilean Peso</option>
+              <option data-rate="1400" value="NGN">NGN - Nigerian Naira</option>
+              <option data-rate="4.9686" value="BRL">
+                BRL - Brazilian Real
+              </option>
+              <option data-rate="91.407678" value="RUB">
+                RUB - Russian Ruble
+              </option>
+              <option data-rate="37.650222" value="UAH">
+                UAH - Ukrainian Hryvnia
+              </option>
+              <option data-rate="35.9694" value="THB">THB - Thai Baht</option>
+              <option data-rate="4.014916" value="PLN">
+                PLN - Polish Zloty
+              </option>
+              <option data-rate="83.017798" value="INR">
+                INR - Indian Rupee
+              </option>
+              <option data-rate="0.0004020633" value="ETH">
+                ETH - Ethereum
+              </option>
+            </optgroup>
+            <optgroup label="Other">
+              <option data-rate="72.5" value="AFN">AFN - Afghan Afghani</option>
+              <option data-rate="96.55" value="ALL">ALL - Albanian Lek</option>
+              <option data-rate="134.341524" value="DZD">
+                DZD - Algerian Dinar
+              </option>
+              <option data-rate="831.5" value="AOA">
+                AOA - Angolan Kwanza
+              </option>
+              <option data-rate="831.25004" value="ARS">
+                ARS - Argentine Peso
+              </option>
+              <option data-rate="405.937118" value="AMD">
+                AMD - Armenian Dram
+              </option>
+              <option data-rate="1.8025" value="AWG">
+                AWG - Aruban Florin
+              </option>
+              <option data-rate="1.7" value="AZN">
+                AZN - Azerbaijani Manat
+              </option>
+              <option data-rate="1" value="BSD">BSD - Bahamian Dollar</option>
+              <option data-rate="0.376947" value="BHD">
+                BHD - Bahraini Dinar
+              </option>
+              <option data-rate="109.742377" value="BDT">
+                BDT - Bangladeshi Taka
+              </option>
+              <option data-rate="2" value="BBD">BBD - Barbadian Dollar</option>
+              <option data-rate="3.271757" value="BYN">
+                BYN - Belarusian Ruble
+              </option>
+              <option data-rate="2.015502" value="BZD">
+                BZD - Belize Dollar
+              </option>
+              <option data-rate="1" value="BMD">BMD - Bermudan Dollar</option>
+              <option data-rate="83.005404" value="BTN">
+                BTN - Bhutanese Ngultrum
+              </option>
+              <option data-rate="6.90926" value="BOB">
+                BOB - Bolivian Boliviano
+              </option>
+              <option data-rate="1.815549" value="BAM">
+                BAM - Bosnia-Herzegovina Mark
+              </option>
+              <option data-rate="13.725691" value="BWP">
+                BWP - Botswanan Pula
+              </option>
+              <option data-rate="1.345927" value="BND">
+                BND - Brunei Dollar
+              </option>
+              <option data-rate="2099.78662" value="MMK">
+                MMK - Burmese kyat (Myanmar Kyat)
+              </option>
+              <option data-rate="2864" value="BIF">
+                BIF - Burundian Franc
+              </option>
+              <option data-rate="4083" value="KHR">KHR - Cambodian Riel</option>
+              <option data-rate="102.65" value="CVE">
+                CVE - Cape Verdean Escudo
+              </option>
+              <option data-rate="0.833233" value="KYD">
+                KYD - Cayman Islands Dollar
+              </option>
+              <option data-rate="608.406954" value="XOF">
+                XOF - CFA Franc BCEAO
+              </option>
+              <option data-rate="608.406954" value="XAF">
+                XAF - CFA Franc BEAC
+              </option>
+              <option data-rate="110.681435" value="XPF">
+                XPF - CFP Franc
+              </option>
+              <option data-rate="0.035091" value="CLF">
+                CLF - Chilean Unit of Account (UF)
+              </option>
+              <option data-rate="7.21886" value="CNH">
+                CNH - Chinese Yuan (Offshore)
+              </option>
+              <option data-rate="3938.794417" value="COP">
+                COP - Colombian Peso
+              </option>
+              <option data-rate="457.050162" value="KMF">
+                KMF - Comorian Franc
+              </option>
+              <option data-rate="2745" value="CDF">
+                CDF - Congolese Franc
+              </option>
+              <option data-rate="516.589585" value="CRC">
+                CRC - Costa Rican Colón
+              </option>
+              <option data-rate="6.988154" value="HRK">
+                HRK - Croatian Kuna
+              </option>
+              <option data-rate="1" value="CUC">
+                CUC - Cuban Convertible Peso
+              </option>
+              <option data-rate="25.75" value="CUP">CUP - Cuban Peso</option>
+              <option data-rate="23.3989" value="CZK">
+                CZK - Czech Koruna
+              </option>
+              <option data-rate="6.9149" value="DKK">DKK - Danish Krone</option>
+              <option data-rate="177.5" value="DJF">
+                DJF - Djiboutian Franc
+              </option>
+              <option data-rate="12.3341653340" value="DOGE">
+                DOGE - DogeCoin
+              </option>
+              <option data-rate="58.65" value="DOP">
+                DOP - Dominican Peso
+              </option>
+              <option data-rate="2.70255" value="XCD">
+                XCD - East Caribbean Dollar
+              </option>
+              <option data-rate="30.8977" value="EGP">
+                EGP - Egyptian Pound
+              </option>
+              <option data-rate="3.67285" value="AED">
+                AED - Emirati Dirham
+              </option>
+              <option data-rate="15" value="ERN">ERN - Eritrean Nakfa</option>
+              <option data-rate="56.535" value="ETB">
+                ETB - Ethiopian Birr
+              </option>
+              <option data-rate="0.79203" value="FKP">
+                FKP - Falkland Islands Pound
+              </option>
+              <option data-rate="2.2442" value="FJD">
+                FJD - Fijian Dollar
+              </option>
+              <option data-rate="67.675" value="GMD">
+                GMD - Gambian Dalasi
+              </option>
+              <option data-rate="2.655" value="GEL">GEL - Georgian Lari</option>
+              <option data-rate="12.43" value="GHS">GHS - Ghanaian Cedi</option>
+              <option data-rate="0.79203" value="GIP">
+                GIP - Gibraltar Pound
+              </option>
+              <option data-rate="0.00049476" value="XAU">
+                XAU - Gold (ounce)
+              </option>
+              <option data-rate="7.809628" value="GTQ">
+                GTQ - Guatemalan Quetzal
+              </option>
+              <option data-rate="0.79203" value="GGP">
+                GGP - Guernsey pound
+              </option>
+              <option data-rate="8597.5" value="GNF">
+                GNF - Guinean Franc
+              </option>
+              <option data-rate="209.355221" value="GYD">
+                GYD - Guyanese dollar
+              </option>
+              <option data-rate="131.659346" value="HTG">
+                HTG - Haitian Gourde
+              </option>
+              <option data-rate="24.73" value="HNL">
+                HNL - Honduran Lempira
+              </option>
+              <option data-rate="359.09419" value="HUF">
+                HUF - Hungarian Forint
+              </option>
+              <option data-rate="137.54" value="ISK">
+                ISK - Icelandic Króna
+              </option>
+              <option data-rate="15623.702992" value="IDR">
+                IDR - Indonesian Rupiah
+              </option>
+              <option data-rate="42037.5" value="IRR">
+                IRR - Iranian Rial
+              </option>
+              <option data-rate="1310" value="IQD">IQD - Iraqi Dinar</option>
+              <option data-rate="3.671" value="ILS">
+                ILS - Israeli Sheqel
+              </option>
+              <option data-rate="156.48177" value="JMD">
+                JMD - Jamaican Dollar
+              </option>
+              <option data-rate="0.79203" value="JEP">
+                JEP - Jersey pound
+              </option>
+              <option data-rate="0.7091" value="JOD">
+                JOD - Jordanian Dinar
+              </option>
+              <option data-rate="449.760096" value="KZT">
+                KZT - Kazakhstani Tenge
+              </option>
+              <option data-rate="160" value="KES">KES - Kenyan Shilling</option>
+              <option data-rate="0.307948" value="KWD">
+                KWD - Kuwaiti Dinar
+              </option>
+              <option data-rate="89.43" value="KGS">
+                KGS - Kyrgystani Som
+              </option>
+              <option data-rate="20840" value="LAK">LAK - Laotian Kip</option>
+              <option data-rate="15030.5" value="LBP">
+                LBP - Lebanese Pound
+              </option>
+              <option data-rate="18.97" value="LSL">LSL - Lesotho Loti</option>
+              <option data-rate="190.249977" value="LRD">
+                LRD - Liberian Dollar
+              </option>
+              <option data-rate="4.85" value="LYD">LYD - Libyan Dinar</option>
+              <option data-rate="320" value="LD">LD - Linden Dollar</option>
+              <option data-rate="8.053209" value="MOP">
+                MOP - Macanese Pataca
+              </option>
+              <option data-rate="57.222325" value="MKD">
+                MKD - Macedonian Denar
+              </option>
+              <option data-rate="4540" value="MGA">
+                MGA - Malagasy Ariary
+              </option>
+              <option data-rate="1683.164467" value="MWK">
+                MWK - Malawian Kwacha
+              </option>
+              <option data-rate="4.769999" value="MYR">
+                MYR - Malaysian Ringgit
+              </option>
+              <option data-rate="15.4" value="MVR">
+                MVR - Maldivian Rufiyaa
+              </option>
+              <option data-rate="0.79203" value="IMP">IMP - Manx pound</option>
+              <option data-rate="356.999828" value="MRO">
+                MRO - Mauritanian Ouguiya
+              </option>
+              <option data-rate="45.392992" value="MUR">
+                MUR - Mauritian Rupee
+              </option>
+              <option data-rate="17.777873" value="MDL">
+                MDL - Moldovan Leu
+              </option>
+              <option data-rate="3450" value="MNT">
+                MNT - Mongolian Tugrik
+              </option>
+              <option data-rate="10.0445" value="MAD">
+                MAD - Moroccan Dirham
+              </option>
+              <option data-rate="63.875002" value="MZN">
+                MZN - Mozambican Metical
+              </option>
+              <option data-rate="18.97" value="NAD">
+                NAD - Namibian Dollar
+              </option>
+              <option data-rate="132.808251" value="NPR">
+                NPR - Nepalese Rupee
+              </option>
+              <option data-rate="1.802072" value="ANG">
+                ANG - Netherlands Antillean Guilder
+              </option>
+              <option data-rate="31.408999" value="TWD">
+                TWD - New Taiwan Dollar
+              </option>
+              <option data-rate="36.78" value="NIO">
+                NIO - Nicaraguan Córdoba
+              </option>
+              <option data-rate="900" value="KPW">
+                KPW - North Korean Won
+              </option>
+              <option data-rate="0.384952" value="OMR">OMR - Omani Rial</option>
+              <option data-rate="0.00115576" value="XPD">
+                XPD - Palladium (ounce)
+              </option>
+              <option data-rate="1" value="PAB">PAB - Panamanian Balboa</option>
+              <option data-rate="3.7295" value="PGK">
+                PGK - Papua New Guinean Kina
+              </option>
+              <option data-rate="7286.080838" value="PYG">
+                PYG - Paraguayan Guarani
+              </option>
+              <option data-rate="3.8535" value="PEN">
+                PEN - Peruvian Nuevo Sol
+              </option>
+              <option data-rate="56.029996" value="PHP">
+                PHP - Philippine Peso
+              </option>
+              <option data-rate="0.00115128" value="XPT">
+                XPT - Platinum (ounce)
+              </option>
+              <option data-rate="3.641" value="QAR">QAR - Qatari Rial</option>
+              <option data-rate="4.6167" value="RON">RON - Romanian Leu</option>
+              <option data-rate="1275" value="RWF">RWF - Rwandan Franc</option>
+              <option data-rate="0.79203" value="SHP">
+                SHP - Saint Helena Pound
+              </option>
+              <option data-rate="8.74913" value="SVC">
+                SVC - Salvadoran Colón
+              </option>
+              <option data-rate="2.8" value="WST">WST - Samoan Tala</option>
+              <option data-rate="22281.8" value="STD">
+                STD - Sao Tome and Principe Dobra
+              </option>
+              <option data-rate="23" value="STN">
+                STN - São Tomé and Príncipe Dobra
+              </option>
+              <option data-rate="3.750133" value="SAR">
+                SAR - Saudi Riyal
+              </option>
+              <option data-rate="108.683085" value="RSD">
+                RSD - Serbian Dinar
+              </option>
+              <option data-rate="13.19524" value="SCR">
+                SCR - Seychellois Rupee
+              </option>
+              <option data-rate="20969.5" value="SLL">
+                SLL - Sierra Leonean Leone
+              </option>
+              <option data-rate="0.04456666" value="XAG">
+                XAG - Silver (ounce)
+              </option>
+              <option data-rate="8.440171" value="SBD">
+                SBD - Solomon Islands Dollar
+              </option>
+              <option data-rate="571.5" value="SOS">
+                SOS - Somali Shilling
+              </option>
+              <option data-rate="19.04015" value="ZAR">
+                ZAR - South African Rand
+              </option>
+              <option data-rate="130.26" value="SSP">
+                SSP - South Sudanese Pound
+              </option>
+              <option data-rate="0.750244" value="XDR">
+                XDR - Special Drawing Rights
+              </option>
+              <option data-rate="312.982131" value="LKR">
+                LKR - Sri Lankan Rupee
+              </option>
+              <option data-rate="601" value="SDG">SDG - Sudanese Pound</option>
+              <option data-rate="36.4995" value="SRD">
+                SRD - Surinamese Dollar
+              </option>
+              <option data-rate="18.97" value="SZL">
+                SZL - Swazi Lilangeni
+              </option>
+              <option data-rate="10.470595" value="SEK">
+                SEK - Swedish Krona
+              </option>
+              <option data-rate="2512.53" value="SYP">
+                SYP - Syrian Pound
+              </option>
+              <option data-rate="10.943978" value="TJS">
+                TJS - Tajikistani Somoni
+              </option>
+              <option data-rate="2524.766466" value="TZS">
+                TZS - Tanzanian Shilling
+              </option>
+              <option data-rate="2.371541" value="TOP">
+                TOP - Tongan Paanga
+              </option>
+              <option data-rate="6.784538" value="TTD">
+                TTD - Trinidad and Tobago Dollar
+              </option>
+              <option data-rate="3.1295" value="TND">
+                TND - Tunisian Dinar
+              </option>
+              <option data-rate="30.688025" value="TRY">
+                TRY - Turkish Lira
+              </option>
+              <option data-rate="3.5" value="TMT">
+                TMT - Turkmenistan Manat
+              </option>
+              <option data-rate="3857.052984" value="UGX">
+                UGX - Ugandan Shilling
+              </option>
+              <option data-rate="39.229752" value="UYU">
+                UYU - Uruguayan Peso
+              </option>
+              <option data-rate="12485" value="UZS">
+                UZS - Uzbekistan Som
+              </option>
+              <option data-rate="118.722" value="VUV">
+                VUV - Vanuatu Vatu
+              </option>
+              <option data-rate="36.192229" value="VES">
+                VES - Venezuelan bolívar soberano
+              </option>
+              <option data-rate="24429.527383" value="VND">
+                VND - Vietnamese Dong
+              </option>
+              <option data-rate="250.350066" value="YER">
+                YER - Yemeni Rial
+              </option>
+              <option data-rate="26.922256" value="ZMW">
+                ZMW - Zambian Kwacha
+              </option>
+              <option data-rate="322" value="ZWL">
+                ZWL - Zimbabwean Dollar (2009)
+              </option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <select
+            class="form-control input-sm currency-form"
+            name="to"
+            id="to"
+            data-currency-code="EUR"
+          >
+            <optgroup label="Popular">
+              <option data-rate="1.8142" value="BGN">
+                BGN - Bulgarian Lev
+              </option>
+              <option data-rate="0.0000211451" value="BTC">
+                BTC - Bitcoin
+              </option>
+              <option data-rate="1" value="USD">USD - US Dollar</option>
+              <option data-rate="0.92751" value="EUR" selected="">
+                EUR - Euro
+              </option>
+              <option data-rate="0.79203" value="GBP">
+                GBP - British Pound Sterling
+              </option>
+              <option data-rate="1.534873" value="AUD">
+                AUD - Australian Dollar
+              </option>
+              <option data-rate="1.34799" value="CAD">
+                CAD - Canadian Dollar
+              </option>
+              <option data-rate="0.875101" value="CHF">
+                CHF - Swiss Franc
+              </option>
+              <option data-rate="7.1219" value="CNY">CNY - Chinese Yuan</option>
+              <option data-rate="149.3846" value="JPY">
+                JPY - Japanese Yen
+              </option>
+              <option data-rate="1.34673" value="SGD">
+                SGD - Singapore Dollar
+              </option>
+              <option data-rate="1.628842" value="NZD">
+                NZD - New Zealand Dollar
+              </option>
+              <option data-rate="279.35" value="PKR">
+                PKR - Pakistani Rupee
+              </option>
+              <option data-rate="7.81979" value="HKD">
+                HKD - Hong Kong Dollar
+              </option>
+              <option data-rate="1333.541192" value="KRW">
+                KRW - South Korean Won
+              </option>
+              <option data-rate="17.099107" value="MXN">
+                MXN - Mexican Peso
+              </option>
+              <option data-rate="10.56695" value="NOK">
+                NOK - Norwegian Krone
+              </option>
+              <option data-rate="968.28" value="CLP">CLP - Chilean Peso</option>
+              <option data-rate="1400" value="NGN">NGN - Nigerian Naira</option>
+              <option data-rate="4.9686" value="BRL">
+                BRL - Brazilian Real
+              </option>
+              <option data-rate="91.407678" value="RUB">
+                RUB - Russian Ruble
+              </option>
+              <option data-rate="37.650222" value="UAH">
+                UAH - Ukrainian Hryvnia
+              </option>
+              <option data-rate="35.9694" value="THB">THB - Thai Baht</option>
+              <option data-rate="4.014916" value="PLN">
+                PLN - Polish Zloty
+              </option>
+              <option data-rate="83.017798" value="INR">
+                INR - Indian Rupee
+              </option>
+              <option data-rate="0.0004020633" value="ETH">
+                ETH - Ethereum
+              </option>
+            </optgroup>
+            <optgroup label="Other">
+              <option data-rate="72.5" value="AFN">AFN - Afghan Afghani</option>
+              <option data-rate="96.55" value="ALL">ALL - Albanian Lek</option>
+              <option data-rate="134.341524" value="DZD">
+                DZD - Algerian Dinar
+              </option>
+              <option data-rate="831.5" value="AOA">
+                AOA - Angolan Kwanza
+              </option>
+              <option data-rate="831.25004" value="ARS">
+                ARS - Argentine Peso
+              </option>
+              <option data-rate="405.937118" value="AMD">
+                AMD - Armenian Dram
+              </option>
+              <option data-rate="1.8025" value="AWG">
+                AWG - Aruban Florin
+              </option>
+              <option data-rate="1.7" value="AZN">
+                AZN - Azerbaijani Manat
+              </option>
+              <option data-rate="1" value="BSD">BSD - Bahamian Dollar</option>
+              <option data-rate="0.376947" value="BHD">
+                BHD - Bahraini Dinar
+              </option>
+              <option data-rate="109.742377" value="BDT">
+                BDT - Bangladeshi Taka
+              </option>
+              <option data-rate="2" value="BBD">BBD - Barbadian Dollar</option>
+              <option data-rate="3.271757" value="BYN">
+                BYN - Belarusian Ruble
+              </option>
+              <option data-rate="2.015502" value="BZD">
+                BZD - Belize Dollar
+              </option>
+              <option data-rate="1" value="BMD">BMD - Bermudan Dollar</option>
+              <option data-rate="83.005404" value="BTN">
+                BTN - Bhutanese Ngultrum
+              </option>
+              <option data-rate="6.90926" value="BOB">
+                BOB - Bolivian Boliviano
+              </option>
+              <option data-rate="1.815549" value="BAM">
+                BAM - Bosnia-Herzegovina Mark
+              </option>
+              <option data-rate="13.725691" value="BWP">
+                BWP - Botswanan Pula
+              </option>
+              <option data-rate="1.345927" value="BND">
+                BND - Brunei Dollar
+              </option>
+              <option data-rate="2099.78662" value="MMK">
+                MMK - Burmese kyat (Myanmar Kyat)
+              </option>
+              <option data-rate="2864" value="BIF">
+                BIF - Burundian Franc
+              </option>
+              <option data-rate="4083" value="KHR">KHR - Cambodian Riel</option>
+              <option data-rate="102.65" value="CVE">
+                CVE - Cape Verdean Escudo
+              </option>
+              <option data-rate="0.833233" value="KYD">
+                KYD - Cayman Islands Dollar
+              </option>
+              <option data-rate="608.406954" value="XOF">
+                XOF - CFA Franc BCEAO
+              </option>
+              <option data-rate="608.406954" value="XAF">
+                XAF - CFA Franc BEAC
+              </option>
+              <option data-rate="110.681435" value="XPF">
+                XPF - CFP Franc
+              </option>
+              <option data-rate="0.035091" value="CLF">
+                CLF - Chilean Unit of Account (UF)
+              </option>
+              <option data-rate="7.21886" value="CNH">
+                CNH - Chinese Yuan (Offshore)
+              </option>
+              <option data-rate="3938.794417" value="COP">
+                COP - Colombian Peso
+              </option>
+              <option data-rate="457.050162" value="KMF">
+                KMF - Comorian Franc
+              </option>
+              <option data-rate="2745" value="CDF">
+                CDF - Congolese Franc
+              </option>
+              <option data-rate="516.589585" value="CRC">
+                CRC - Costa Rican Colón
+              </option>
+              <option data-rate="6.988154" value="HRK">
+                HRK - Croatian Kuna
+              </option>
+              <option data-rate="1" value="CUC">
+                CUC - Cuban Convertible Peso
+              </option>
+              <option data-rate="25.75" value="CUP">CUP - Cuban Peso</option>
+              <option data-rate="23.3989" value="CZK">
+                CZK - Czech Koruna
+              </option>
+              <option data-rate="6.9149" value="DKK">DKK - Danish Krone</option>
+              <option data-rate="177.5" value="DJF">
+                DJF - Djiboutian Franc
+              </option>
+              <option data-rate="12.3341653340" value="DOGE">
+                DOGE - DogeCoin
+              </option>
+              <option data-rate="58.65" value="DOP">
+                DOP - Dominican Peso
+              </option>
+              <option data-rate="2.70255" value="XCD">
+                XCD - East Caribbean Dollar
+              </option>
+              <option data-rate="30.8977" value="EGP">
+                EGP - Egyptian Pound
+              </option>
+              <option data-rate="3.67285" value="AED">
+                AED - Emirati Dirham
+              </option>
+              <option data-rate="15" value="ERN">ERN - Eritrean Nakfa</option>
+              <option data-rate="56.535" value="ETB">
+                ETB - Ethiopian Birr
+              </option>
+              <option data-rate="0.79203" value="FKP">
+                FKP - Falkland Islands Pound
+              </option>
+              <option data-rate="2.2442" value="FJD">
+                FJD - Fijian Dollar
+              </option>
+              <option data-rate="67.675" value="GMD">
+                GMD - Gambian Dalasi
+              </option>
+              <option data-rate="2.655" value="GEL">GEL - Georgian Lari</option>
+              <option data-rate="12.43" value="GHS">GHS - Ghanaian Cedi</option>
+              <option data-rate="0.79203" value="GIP">
+                GIP - Gibraltar Pound
+              </option>
+              <option data-rate="0.00049476" value="XAU">
+                XAU - Gold (ounce)
+              </option>
+              <option data-rate="7.809628" value="GTQ">
+                GTQ - Guatemalan Quetzal
+              </option>
+              <option data-rate="0.79203" value="GGP">
+                GGP - Guernsey pound
+              </option>
+              <option data-rate="8597.5" value="GNF">
+                GNF - Guinean Franc
+              </option>
+              <option data-rate="209.355221" value="GYD">
+                GYD - Guyanese dollar
+              </option>
+              <option data-rate="131.659346" value="HTG">
+                HTG - Haitian Gourde
+              </option>
+              <option data-rate="24.73" value="HNL">
+                HNL - Honduran Lempira
+              </option>
+              <option data-rate="359.09419" value="HUF">
+                HUF - Hungarian Forint
+              </option>
+              <option data-rate="137.54" value="ISK">
+                ISK - Icelandic Króna
+              </option>
+              <option data-rate="15623.702992" value="IDR">
+                IDR - Indonesian Rupiah
+              </option>
+              <option data-rate="42037.5" value="IRR">
+                IRR - Iranian Rial
+              </option>
+              <option data-rate="1310" value="IQD">IQD - Iraqi Dinar</option>
+              <option data-rate="3.671" value="ILS">
+                ILS - Israeli Sheqel
+              </option>
+              <option data-rate="156.48177" value="JMD">
+                JMD - Jamaican Dollar
+              </option>
+              <option data-rate="0.79203" value="JEP">
+                JEP - Jersey pound
+              </option>
+              <option data-rate="0.7091" value="JOD">
+                JOD - Jordanian Dinar
+              </option>
+              <option data-rate="449.760096" value="KZT">
+                KZT - Kazakhstani Tenge
+              </option>
+              <option data-rate="160" value="KES">KES - Kenyan Shilling</option>
+              <option data-rate="0.307948" value="KWD">
+                KWD - Kuwaiti Dinar
+              </option>
+              <option data-rate="89.43" value="KGS">
+                KGS - Kyrgystani Som
+              </option>
+              <option data-rate="20840" value="LAK">LAK - Laotian Kip</option>
+              <option data-rate="15030.5" value="LBP">
+                LBP - Lebanese Pound
+              </option>
+              <option data-rate="18.97" value="LSL">LSL - Lesotho Loti</option>
+              <option data-rate="190.249977" value="LRD">
+                LRD - Liberian Dollar
+              </option>
+              <option data-rate="4.85" value="LYD">LYD - Libyan Dinar</option>
+              <option data-rate="320" value="LD">LD - Linden Dollar</option>
+              <option data-rate="8.053209" value="MOP">
+                MOP - Macanese Pataca
+              </option>
+              <option data-rate="57.222325" value="MKD">
+                MKD - Macedonian Denar
+              </option>
+              <option data-rate="4540" value="MGA">
+                MGA - Malagasy Ariary
+              </option>
+              <option data-rate="1683.164467" value="MWK">
+                MWK - Malawian Kwacha
+              </option>
+              <option data-rate="4.769999" value="MYR">
+                MYR - Malaysian Ringgit
+              </option>
+              <option data-rate="15.4" value="MVR">
+                MVR - Maldivian Rufiyaa
+              </option>
+              <option data-rate="0.79203" value="IMP">IMP - Manx pound</option>
+              <option data-rate="356.999828" value="MRO">
+                MRO - Mauritanian Ouguiya
+              </option>
+              <option data-rate="45.392992" value="MUR">
+                MUR - Mauritian Rupee
+              </option>
+              <option data-rate="17.777873" value="MDL">
+                MDL - Moldovan Leu
+              </option>
+              <option data-rate="3450" value="MNT">
+                MNT - Mongolian Tugrik
+              </option>
+              <option data-rate="10.0445" value="MAD">
+                MAD - Moroccan Dirham
+              </option>
+              <option data-rate="63.875002" value="MZN">
+                MZN - Mozambican Metical
+              </option>
+              <option data-rate="18.97" value="NAD">
+                NAD - Namibian Dollar
+              </option>
+              <option data-rate="132.808251" value="NPR">
+                NPR - Nepalese Rupee
+              </option>
+              <option data-rate="1.802072" value="ANG">
+                ANG - Netherlands Antillean Guilder
+              </option>
+              <option data-rate="31.408999" value="TWD">
+                TWD - New Taiwan Dollar
+              </option>
+              <option data-rate="36.78" value="NIO">
+                NIO - Nicaraguan Córdoba
+              </option>
+              <option data-rate="900" value="KPW">
+                KPW - North Korean Won
+              </option>
+              <option data-rate="0.384952" value="OMR">OMR - Omani Rial</option>
+              <option data-rate="0.00115576" value="XPD">
+                XPD - Palladium (ounce)
+              </option>
+              <option data-rate="1" value="PAB">PAB - Panamanian Balboa</option>
+              <option data-rate="3.7295" value="PGK">
+                PGK - Papua New Guinean Kina
+              </option>
+              <option data-rate="7286.080838" value="PYG">
+                PYG - Paraguayan Guarani
+              </option>
+              <option data-rate="3.8535" value="PEN">
+                PEN - Peruvian Nuevo Sol
+              </option>
+              <option data-rate="56.029996" value="PHP">
+                PHP - Philippine Peso
+              </option>
+              <option data-rate="0.00115128" value="XPT">
+                XPT - Platinum (ounce)
+              </option>
+              <option data-rate="3.641" value="QAR">QAR - Qatari Rial</option>
+              <option data-rate="4.6167" value="RON">RON - Romanian Leu</option>
+              <option data-rate="1275" value="RWF">RWF - Rwandan Franc</option>
+              <option data-rate="0.79203" value="SHP">
+                SHP - Saint Helena Pound
+              </option>
+              <option data-rate="8.74913" value="SVC">
+                SVC - Salvadoran Colón
+              </option>
+              <option data-rate="2.8" value="WST">WST - Samoan Tala</option>
+              <option data-rate="22281.8" value="STD">
+                STD - Sao Tome and Principe Dobra
+              </option>
+              <option data-rate="23" value="STN">
+                STN - São Tomé and Príncipe Dobra
+              </option>
+              <option data-rate="3.750133" value="SAR">
+                SAR - Saudi Riyal
+              </option>
+              <option data-rate="108.683085" value="RSD">
+                RSD - Serbian Dinar
+              </option>
+              <option data-rate="13.19524" value="SCR">
+                SCR - Seychellois Rupee
+              </option>
+              <option data-rate="20969.5" value="SLL">
+                SLL - Sierra Leonean Leone
+              </option>
+              <option data-rate="0.04456666" value="XAG">
+                XAG - Silver (ounce)
+              </option>
+              <option data-rate="8.440171" value="SBD">
+                SBD - Solomon Islands Dollar
+              </option>
+              <option data-rate="571.5" value="SOS">
+                SOS - Somali Shilling
+              </option>
+              <option data-rate="19.04015" value="ZAR">
+                ZAR - South African Rand
+              </option>
+              <option data-rate="130.26" value="SSP">
+                SSP - South Sudanese Pound
+              </option>
+              <option data-rate="0.750244" value="XDR">
+                XDR - Special Drawing Rights
+              </option>
+              <option data-rate="312.982131" value="LKR">
+                LKR - Sri Lankan Rupee
+              </option>
+              <option data-rate="601" value="SDG">SDG - Sudanese Pound</option>
+              <option data-rate="36.4995" value="SRD">
+                SRD - Surinamese Dollar
+              </option>
+              <option data-rate="18.97" value="SZL">
+                SZL - Swazi Lilangeni
+              </option>
+              <option data-rate="10.470595" value="SEK">
+                SEK - Swedish Krona
+              </option>
+              <option data-rate="2512.53" value="SYP">
+                SYP - Syrian Pound
+              </option>
+              <option data-rate="10.943978" value="TJS">
+                TJS - Tajikistani Somoni
+              </option>
+              <option data-rate="2524.766466" value="TZS">
+                TZS - Tanzanian Shilling
+              </option>
+              <option data-rate="2.371541" value="TOP">
+                TOP - Tongan Paanga
+              </option>
+              <option data-rate="6.784538" value="TTD">
+                TTD - Trinidad and Tobago Dollar
+              </option>
+              <option data-rate="3.1295" value="TND">
+                TND - Tunisian Dinar
+              </option>
+              <option data-rate="30.688025" value="TRY">
+                TRY - Turkish Lira
+              </option>
+              <option data-rate="3.5" value="TMT">
+                TMT - Turkmenistan Manat
+              </option>
+              <option data-rate="3857.052984" value="UGX">
+                UGX - Ugandan Shilling
+              </option>
+              <option data-rate="39.229752" value="UYU">
+                UYU - Uruguayan Peso
+              </option>
+              <option data-rate="12485" value="UZS">
+                UZS - Uzbekistan Som
+              </option>
+              <option data-rate="118.722" value="VUV">
+                VUV - Vanuatu Vatu
+              </option>
+              <option data-rate="36.192229" value="VES">
+                VES - Venezuelan bolívar soberano
+              </option>
+              <option data-rate="24429.527383" value="VND">
+                VND - Vietnamese Dong
+              </option>
+              <option data-rate="250.350066" value="YER">
+                YER - Yemeni Rial
+              </option>
+              <option data-rate="26.922256" value="ZMW">
+                ZMW - Zambian Kwacha
+              </option>
+              <option data-rate="322" value="ZWL">
+                ZWL - Zimbabwean Dollar (2009)
+              </option>
+            </optgroup>
+          </select>
+        </div>
+        <p class="text-center" id="result-wrap">
+          <span class="result" id="result-fit">0.928 <small>EUR</small></span>
+        </p>
+      </div>
+      <div class="panel-footer">
+        <a
+          href="https://currencyrate.today/converter-widget"
+          rel="noopener nofollow"
+          title="Get widget - Currency Converter"
+          target="_blank"
+          class="btn btn-sm btn-default"
+          ><svg
+            role="img"
+            style="position: relative; top: 3px"
+            fill="black"
+            width="16"
+            height="16"
+            viewBox="0 0 1792 1792"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Get widget - Currency Converter</title>
+            <path
+              d="M1600 736v192q0 40-28 68t-68 28h-416v416q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-416h-416q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h416v-416q0-40 28-68t68-28h192q40 0 68 28t28 68v416h416q40 0 68 28t28 68z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <!-- For switch button -->
+    <script>
+      "use strict";
+      !(function (e, t) {
+        var n = function (e) {
+          return new s(e);
+        };
+        n.version = "0.2";
+        var r = e.fxSetup || { rates: {}, base: "" };
+        (n.rates = r.rates),
+          (n.base = r.base),
+          (n.settings = { from: r.from || n.base, to: r.to || n.base });
+        var o,
+          a = (n.convert = function (e, t) {
+            if ("object" == typeof e && e.length) {
+              for (var r = 0; r < e.length; r++) e[r] = a(e[r], t);
+              return e;
+            }
+            return (
+              (t = t || {}).from || (t.from = n.settings.from),
+              t.to || (t.to = n.settings.to),
+              e * i(t.to, t.from)
+            );
+          }),
+          i = function (e, t) {
+            var r = n.rates;
+            if (((r[n.base] = 1), !r[e] || !r[t])) throw "fx error";
+            return t === n.base
+              ? r[e]
+              : e === n.base
+              ? 1 / r[t]
+              : r[e] * (1 / r[t]);
+          },
+          s = function (e) {
+            "string" == typeof e
+              ? ((this._v = parseFloat(e.replace(/[^0-9-.]/g, ""))),
+                (this._fx = e.replace(/([^A-Za-z])/g, "")))
+              : (this._v = e);
+          },
+          c = (n.prototype = s.prototype);
+        (c.convert = function () {
+          var e = Array.prototype.slice.call(arguments);
+          return e.unshift(this._v), a.apply(n, e);
+        }),
+          (c.from = function (e) {
+            var t = n(a(this._v, { from: e, to: n.base }));
+            return (t._fx = n.base), t;
+          }),
+          (c.to = function (e) {
+            return a(this._v, {
+              from: this._fx ? this._fx : n.settings.from,
+              to: e,
+            });
+          }),
+          "undefined" != typeof exports
+            ? ("undefined" != typeof module &&
+                module.exports &&
+                (exports = module.exports = n),
+              (exports.fx = n))
+            : "function" == typeof define && define.amd
+            ? define([], function () {
+                return n;
+              })
+            : ((n.noConflict =
+                ((o = e.fx),
+                function () {
+                  return (e.fx = o), (n.noConflict = void 0), n;
+                })),
+              (e.fx = n));
+      })(this);
+      var _number_format = function (e, t, n) {
+        var r = Number(e),
+          o = t;
+        if (0 === r) return 0;
+        if (r <= 1e-12) o = 9;
+        else if (r.toFixed(5) < 1) {
+          var a = -Math.floor(Math.log(r) / Math.log(10) + 1);
+          o = -0 === a ? 3 : a + 3;
+        }
+        switch (n) {
+          case "ceil":
+            Math.ceil(r * Math.pow(10, o)) / Math.pow(10, o);
+            break;
+          case "floor":
+            Math.floor(r * Math.pow(10, o)) / Math.pow(10, o);
+        }
+        return (function (e, t, n, r) {
+          e = (e + "").replace(/[^0-9+\-Ee.]/g, "");
+          var o,
+            a,
+            i,
+            s = isFinite(+e) ? +e : 0,
+            c = isFinite(+t) ? Math.abs(t) : 0,
+            f = void 0 === r ? "," : r,
+            u = void 0 === n ? "." : n,
+            d = "";
+          return (
+            (d = (
+              c
+                ? ((o = s),
+                  (a = c),
+                  (i = Math.pow(10, a)),
+                  "" + Math.round(o * i) / i)
+                : "" + Math.round(s)
+            ).split("."))[0].length > 3 &&
+              (d[0] = d[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, f)),
+            (d[1] || "").length < c &&
+              ((d[1] = d[1] || ""),
+              (d[1] += new Array(c - d[1].length + 1).join("0"))),
+            d.join(u)
+          );
+        })(r, o, ".", " ");
+      };
+      !(function (e, t) {
+        var n = t.querySelectorAll(".currency-form");
+        t.getElementById("swap").addEventListener("click", function (e) {
+          e.preventDefault(), r();
+        });
+        var r = function () {
+            var e = t.querySelectorAll(".currency-form"),
+              n = e[1].selectedIndex,
+              r = e[0].selectedIndex;
+            (e[0].selectedIndex = n),
+              (e[1].selectedIndex = r),
+              e[0].dispatchEvent(new Event("change")),
+              e[1].dispatchEvent(new Event("change"));
+          },
+          o = function (e) {
+            for (
+              var r = t.getElementById("converter").getAttribute("data-base"),
+                o = n[0],
+                a = n[1],
+                i = o.getAttribute("data-currency-code"),
+                s = a.getAttribute("data-currency-code"),
+                c = {},
+                f = 0;
+              f < n.length;
+              f++
+            )
+              c[n[f].getAttribute("data-currency-code")] =
+                n[f].options[n[f].selectedIndex].getAttribute("data-rate");
+            if ("undefined" != typeof fx && fx.rates)
+              (fx.base = r), (fx.rates = c);
+            else;
+            (t.getElementById("result-fit").innerHTML =
+              _number_format(fx.convert(e, { to: s, from: i }), 2) +
+              " <small>" +
+              s +
+              "</small>"),
+              (t.getElementById("currency-code").innerHTML = i);
+          };
+        t.getElementById("amount").addEventListener(
+          "input",
+          function () {
+            o(this.value);
+          },
+          !1
+        ),
+          n[0].addEventListener(
+            "change",
+            function () {
+              this.setAttribute("data-currency-code", this.value),
+                o(t.getElementById("amount").value);
+            },
+            !1
+          ),
+          n[1].addEventListener(
+            "change",
+            function () {
+              this.setAttribute("data-currency-code", this.value),
+                o(t.getElementById("amount").value);
+            },
+            !1
+          ),
+          (document.onload = o(t.getElementById("amount").value));
+      })(window, document);
+    </script>
+  </body>
 </html>
