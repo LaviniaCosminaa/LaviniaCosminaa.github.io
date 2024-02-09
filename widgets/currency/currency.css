@@ -1,0 +1,10 @@
+a{
+    background-color: red !important;
+    color: blue !important;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: red!important;
+    border-color: black !important;
+}
